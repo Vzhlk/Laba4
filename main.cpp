@@ -23,26 +23,26 @@ int main()
 		tree_to_copy = tree;
 	}
 	tree.print();
-	std::cout << "Ìèíèìàëüíûé ýëåìåíò: " << tree.get_min() << " " << "Ìàêñèìàëüíûé ýëåìåíò: " << tree.get_max() << std::endl;
-	std::cout << "Âûñîòà äåðåâà: " << tree.get_high() << std::endl;
+	std::cout << "ÃŒÃ¨Ã­Ã¨Ã¬Ã Ã«Ã¼Ã­Ã»Ã© Ã½Ã«Ã¥Ã¬Ã¥Ã­Ã²: " << tree.get_min() << " " << "ÃŒÃ ÃªÃ±Ã¨Ã¬Ã Ã«Ã¼Ã­Ã»Ã© Ã½Ã«Ã¥Ã¬Ã¥Ã­Ã²: " << tree.get_max() << std::endl;
+	std::cout << "Ã‚Ã»Ã±Ã®Ã²Ã  Ã¤Ã¥Ã°Ã¥Ã¢Ã : " << tree.get_high() << std::endl;
 	std::cout << tree.find(9) << " " << tree.find(-11) << std::endl;
 	tree.remove(-11);
 	tree.remove(58);
-	std::cout << "Âûñîòà äåðåâà ïîñëå óäàëåíèÿ ýëåìåíòîâ: " << tree.get_high() << std::endl;
+	std::cout << "Ã‚Ã»Ã±Ã®Ã²Ã  Ã¤Ã¥Ã°Ã¥Ã¢Ã  Ã¯Ã®Ã±Ã«Ã¥ Ã³Ã¤Ã Ã«Ã¥Ã­Ã¨Ã¿ Ã½Ã«Ã¥Ã¬Ã¥Ã­Ã²Ã®Ã¢: " << tree.get_high() << std::endl;
 	tree.print();
 	std::vector<double> arr_DFS = tree.DFS();
-	std::cout << "Ðåçóëüòàò îáõîäà â ãëóáèíó" << std::endl;
+	std::cout << "ÃÃ¥Ã§Ã³Ã«Ã¼Ã²Ã Ã² Ã®Ã¡ÃµÃ®Ã¤Ã  Ã¢ Ã£Ã«Ã³Ã¡Ã¨Ã­Ã³" << std::endl;
 	for (int i = 0; i < arr_DFS.size(); i++) 
 		std::cout << arr_DFS[i] << " ";
 	std::cout << std::endl;
-	std::cout << "Ðåçóëüòàò îáõîäà â øèðèíó" << std::endl;
+	std::cout << "ÃÃ¥Ã§Ã³Ã«Ã¼Ã²Ã Ã² Ã®Ã¡ÃµÃ®Ã¤Ã  Ã¢ Ã¸Ã¨Ã°Ã¨Ã­Ã³" << std::endl;
 	std::vector<double> arr_BFS = tree.BFS();
 	for (int i = 0; i < arr_BFS.size(); i++) 
 		std::cout << arr_BFS[i] << " ";
 	std::cout << std::endl;
 	
-	std::cout << "Ïîääåðåâî áèíàðíîãî äåðåâà:" << std::endl;
-
+	std::cout << "ÃÃ®Ã¤Ã¤Ã¥Ã°Ã¥Ã¢Ã® Ã¡Ã¨Ã­Ã Ã°Ã­Ã®Ã£Ã® Ã¤Ã¥Ã°Ã¥Ã¢Ã :" << std::endl;
+//Ð¾ÑˆÐ¸Ð±ÐºÐ¸ Ñ ÑÑ‚Ð¾Ð³Ð¾ Ð¼Ð¾Ð¼ÐµÐ½Ñ‚Ð°
 	Tree::Node* newRoot = tree.extractSubtree(tree.root, 15.0);
 	tree.root = newRoot;
 	            
